@@ -1,6 +1,6 @@
-# 👷 `worker-template` Hello World
+# 👷 Host Notion on Cloudflare Workers!
 
-A template for kick starting a Cloudflare worker project.
+This is a typical cloudflare project. Just make changes to index.js and wrangler.toml, and you're good to go!
 
 [`index.js`](https://github.com/cloudflare/worker-template/blob/master/index.js) is the content of the Workers script.
 
