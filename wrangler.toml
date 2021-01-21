@@ -1,0 +1,6 @@
+name = "host-notion"
+type = "javascript"
+account_id = ""
+workers_dev = true
+route = "YOUR.DOMAIN/*"
+zone_id = ""
