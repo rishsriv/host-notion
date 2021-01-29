@@ -18,7 +18,9 @@ const SLUG_TO_PAGE = {
   "posts/mental-health.html": "0760d4fd513444a7827c9b1343f295bd",
   "ai-crm": "30560dc4bf7042548059bfc6e8bade80",
   "sat": "e29b737f7608488dbe1e75fbec82f8b8",
-  "ai-media-automation.html": "afd3e474605a4c83af2be6dfcfe16be3"
+  "ai-media-automation.html": "afd3e474605a4c83af2be6dfcfe16be3",
+  "resources": "cda0ecb862e84ef3a227fef69a6095fa",
+  "heuristics-decision-making": "507b3ad4819f47fe9ef41f083efb7572"
 };
 
 //add meta description here
@@ -35,7 +37,9 @@ const PAGE_TITLES = {
   "posts/mental-health.html": "Developing personal protocols for maintaining mental health",
   "ai-crm": "Using Machine Learning to extract insights from customer names and images",
   "sat": "Using satellite data to track economic change in developing countries",
-  "ai-media-automation.html": "Dear Journalists, AI is coming for your jobs"
+  "ai-media-automation.html": "Dear Journalists, AI is coming for your jobs",
+  "resources": "Resources to share with other people",
+  "heuristics-decision-making": "Heuristics for decision making"
 }
 
 const PAGE_DESCRIPTIONS = {
@@ -51,7 +55,9 @@ const PAGE_DESCRIPTIONS = {
   "posts/mental-health.html": "Over the last year, I tried to develop personal protocols to maintain my mental health and make it less sensitive to external events. This post contains a summary of these protocols.",
   "ai-crm": "Customer names and images have enormous predictive value, and can be used for a number of use cases in marketing, ecommerce, and sociology.",
   "sat": "Frequently updated satellite imagery can be used to track economic change at the macro- and micro-levels in developing countries",
-  "ai-media-automation.html": "Repetitive journalism will soon get automated, leading to both increased productivity and job losses"
+  "ai-media-automation.html": "Repetitive journalism will soon get automated, leading to both increased productivity and job losses",
+  "resources": "Links to resources that people other than me may find helpful",
+  "heuristics-decision-making": "Rules I have used for making better decisions"
 }
 
 DEFAULT_TITLE = "Developer and Entrepreneur | Rishabh Srivastava";
@@ -61,7 +67,7 @@ DEFAULT_DESC = "Notes, posts, and resources that I have kept handy";
 const GOOGLE_FONT = '';
 
 //add analytics or other scripts here
-const CUSTOM_SCRIPT = `<script src="https://static.loki.ai/analytics.min.js"></script><script>document.addEventListener("DOMContentLoaded", setTimeout(function(){loki_log_enter_data('rish_blog')}, 5000););</script>`;
+const CUSTOM_SCRIPT = `<script src="https://static.loki.ai/analytics.min.js"></script><script>document.addEventListener("DOMContentLoaded", loki_log_enter_data('rish_blog'));</script>`;
 
 const PAGE_TO_SLUG = {};
 const slugs = [];
@@ -350,6 +356,6 @@ async function appendJavascript(res, SLUG_TO_PAGE, slug) {
     .on('meta', new MetaRewriter(slug))
     .on('head', new HeadRewriter())
     .on('body', new BodyRewriter(SLUG_TO_PAGE))
-    .on('script', new ScriptReWriter())
+    //.on('script', new ScriptRewriter())
     .transform(res);
 }
