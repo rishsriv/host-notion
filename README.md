@@ -4,12 +4,9 @@ This is a typical cloudflare project. Just make changes to index.js and wrangler
 
 [`index.js`](https://github.com/cloudflare/worker-template/blob/master/index.js) is the content of the Workers script.
 
-#### Wrangler
+#### wrangler.toml
 
-To generate using [wrangler](https://github.com/cloudflare/wrangler)
+After cloning this repository, just paste in your `account_id`, your domain (in `route`), and `zone_id` in wrangler.toml
 
-```
-wrangler generate projectname https://github.com/cloudflare/worker-template
-```
-
-Further documentation for Wrangler can be found [here](https://developers.cloudflare.com/workers/tooling/wrangler).
+#### index.js
+Change the variables `MY_DOMAIN`, `SLUG_TO_PAGE`, `PAGE_TITLES`, `PAGE_DESCRIPTIONS`, `DEFAULT_TITLE`, `DEFAULT_DESC`, AND `CUSTOM_SCRIPT` in `index.js` to your own domains and pages

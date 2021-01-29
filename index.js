@@ -60,7 +60,7 @@ const PAGE_DESCRIPTIONS = {
   "heuristics-decision-making": "Rules I have used for making better decisions"
 }
 
-DEFAULT_TITLE = "Developer and Entrepreneur | Rishabh Srivastava";
+DEFAULT_TITLE = "Rishabh's Notes";
 DEFAULT_DESC = "Notes, posts, and resources that I have kept handy";
 
 //add font here
